@@ -46,4 +46,60 @@
 // // console.log(--decr)
 // console.log(incr)
 
-console.log(2 + 2 * 2 !== '6')
+// console.log(2 + 2 * 2 !== '6')
+
+// let numbersOfFilms = prompt('Сколько фильмов вы посмотрели?')
+// console.log(numbersOfFilms)
+
+// let personalMovieDB = {
+//     // count: numbersOfFilms,
+//     movies: {},
+//     actors: {},
+//     genres: [],
+//     privat: false
+// }
+
+// console.log(personalMovieDB)
+
+// const a = prompt('Один из последних просмотренных фильмов?', ''),
+//       b = prompt('На сколько оцените его?', ''),
+//       c = prompt('Один из последних просмотренных фильмов?', ''),
+//       d = prompt('На сколько оцените его?', '');
+
+// personalMovieDB.movies[a] = b;
+// personalMovieDB.movies[c] = d;
+
+// console.log(personalMovieDB);
+
+
+// //if else
+// const number = 60
+// if ( number === 50 ) {
+//     console.log('It is true')
+// } else {
+//     console.log('It is false')
+// }
+
+
+// //Тернарный оператор
+// let num = 40
+// num === 50 ? console.log('It is true') : console.log('False')
+
+// //Switch только строгое сравнение
+// let num = 50
+// switch (num) {
+//     case 49:
+//         console.log('False')
+//         break
+//     case 51:
+//         console.log('False')
+//         break
+//     case 52:
+//         console.log('It is true')
+//         break
+//     default:
+//         console.log('OK!')
+//         break
+// }
+
+//While циклы
