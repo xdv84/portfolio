@@ -152,8 +152,60 @@ str.length - и получить её длину)
 "Вы киноман". А если не подошло ни к одному варианту - "Произошла ошибка"
 4) Потренироваться и переписать цикл еще двумя способами*/
 
-let films = +prompt('Сколько фильмов вы посмотрели?')
+// const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
 
+// const personalMovieDB = {
+//     count: numberOfFilms,
+//     movies: {},
+//     actors: {},
+//     genres: [],
+//     privat: false
+// };
 
+// for (let i = 0; i < 2; i++) {
+//     const a = prompt('Один из последних просмотренных фильмов?', ''),
+//           b = prompt('На сколько оцените его?', '');
 
-for ()
+//     if (a != null && b != null && a != '' && b != '' && a.length < 50) {
+//         personalMovieDB.movies[a] = b;
+//         console.log('done');
+//     } else {
+//         console.log('error');
+//         i--;
+//     }
+// }
+
+// if (personalMovieDB.count < 10) {
+//     console.log("Просмотрено довольно мало фильмов");
+// } else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
+//     console.log("Вы классический зритель");
+// } else if (personalMovieDB.count >= 30) {
+//     console.log("Вы киноман");
+// } else {
+//     console.log("Произошла ошибка");
+// }
+
+// console.log(personalMovieDB);
+
+// //Функции
+
+// function showFirstMessage (a, b) {
+//     console.log(a + b)
+// }
+// showFirstMessage(5, 3)
+
+// function calc (a, b) {
+//     return (a + b)  // возвращает в глобальную область, код после return внутри ф-ции не выполняется
+// }
+// console.log(calc(4, 5))
+
+// let summ = (a, b) => a + b
+// console.log(summ(4, 5))
+
+//Методы и свойства строк и чисел
+let string = 'DIMA'
+let str = 'dima'
+console.log(string.length) // свойство
+console.log(string.toLowerCase()) // метод
+console.log(str.toUpperCase()) // метод
+
