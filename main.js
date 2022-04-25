@@ -72,7 +72,7 @@
 // console.log(personalMovieDB);
 
 
-// //if else
+// // ..if else
 // const number = 60
 // if ( number === 50 ) {
 //     console.log('It is true')
@@ -81,7 +81,7 @@
 // }
 
 
-// //Тернарный оператор
+// // ..Тернарный оператор
 // let num = 40
 // num === 50 ? console.log('It is true') : console.log('False')
 
@@ -102,7 +102,7 @@
 //         break
 // }
 
-//While циклы
+// // ..While циклы
 // let num = 50
 
 // while (num < 60) {
@@ -225,80 +225,289 @@ str.length - и получить её длину)
 // let str = '12.2 px'
 // console.log(parseInt(str)) // метод parseInt преобразует строку в число и округляет; parseFloat не округляет
 
-/* Задание на урок:
+// /* Задание на урок:
 
-1) Первую часть задания повторить по уроку
+// 1) Первую часть задания повторить по уроку
 
-2) Создать функцию showMyDB, которая будет проверять свойство privat. Если стоит в позиции
-false - выводит в консоль главный объект программы
+// 2) Создать функцию showMyDB, которая будет проверять свойство privat. Если стоит в позиции
+// false - выводит в консоль главный объект программы
 
-3) Создать функцию writeYourGenres в которой пользователь будет 3 раза отвечать на вопрос 
-"Ваш любимый жанр под номером ${номер по порядку}". Каждый ответ записывается в массив данных
-genres
+// 3) Создать функцию writeYourGenres в которой пользователь будет 3 раза отвечать на вопрос 
+// "Ваш любимый жанр под номером ${номер по порядку}". Каждый ответ записывается в массив данных
+// genres
 
-P.S. Функции вызывать не обязательно*/
+// P.S. Функции вызывать не обязательно*/
 
-//1
-let numberOfFilms
+// //1
+// let numberOfFilms
 
-function start () {
-    numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '')
-    while (numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)) {
-        numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '')
-    }
-}
-start()
+// function start () {
+//     numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '')
+//     while (numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)) {
+//         numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '')
+//     }
+// }
+// start()
 
-const personalMovieDB = {
-    count: numberOfFilms,
-    movies: {},
-    actors: {},
-    genres: [],
-    privat: false
-}
+// const personalMovieDB = {
+//     count: numberOfFilms,
+//     movies: {},
+//     actors: {},
+//     genres: [],
+//     privat: false
+// }
 
-function rememberMyFilms () {
-    for (let i = 0; i < 2; i++) {
-    const a = prompt('Один из последних просмотренных фильмов?', ''),
-          b = prompt('На сколько оцените его?', '');
+// function rememberMyFilms () {
+//     for (let i = 0; i < 2; i++) {
+//     const a = prompt('Один из последних просмотренных фильмов?', ''),
+//           b = prompt('На сколько оцените его?', '');
 
-    if (a != null && b != null && a != '' && b != '' && a.length < 50) {
-        personalMovieDB.movies[a] = b;
-        console.log('done');
-    } else {
-        console.log('error');
-        i--;
-    }
-}
-}
-rememberMyFilms()
+//     if (a != null && b != null && a != '' && b != '' && a.length < 50) {
+//         personalMovieDB.movies[a] = b;
+//         console.log('done');
+//     } else {
+//         console.log('error');
+//         i--;
+//     }
+// }
+// }
+// rememberMyFilms()
 
-function detectPersonalLevel () {
-        if (personalMovieDB.count < 10) {
-        console.log("Просмотрено довольно мало фильмов");
-    } else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
-        console.log("Вы классический зритель");
-    } else if (personalMovieDB.count >= 30) {
-        console.log("Вы киноман");
-    } else {
-        console.log("Произошла ошибка");
-    }
-}
-detectPersonalLevel()
+// function detectPersonalLevel () {
+//         if (personalMovieDB.count < 10) {
+//         console.log("Просмотрено довольно мало фильмов");
+//     } else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
+//         console.log("Вы классический зритель");
+//     } else if (personalMovieDB.count >= 30) {
+//         console.log("Вы киноман");
+//     } else {
+//         console.log("Произошла ошибка");
+//     }
+// }
+// detectPersonalLevel()
 
-//2
-function showMyDb(hidden) {
-    if (!hidden) {
-        console.log(personalMovieDB)
-    }
-}
-showMyDb(personalMovieDB.privat)
+// //2
+// function showMyDb(hidden) {
+//     if (!hidden) {
+//         console.log(personalMovieDB)
+//     }
+// }
+// showMyDb(personalMovieDB.privat)
 
-//3
+// //3
 
-function writeYourGenres() {
-    for (let i=1; i<=3; i++) {
-        personalMovieDB.genres[i - 1] = prompt(`Ваш любимый жанр под номером ${i}`)
-    }
-}
-writeYourGenres()
+// function writeYourGenres() {
+//     for (let i=1; i<=3; i++) {
+//         personalMovieDB.genres[i - 1] = prompt(`Ваш любимый жанр под номером ${i}`)
+//     }
+// }
+// writeYourGenres()
+
+// // Callback function
+// #1
+// function learnJS (learn, callback) {
+//     console.log(`I am learn: ${learn}`)
+//     callback()
+// }
+// learnJS('JS', function() {
+//     console.log('I am very clever')
+// })
+// #2
+// function learnJS (learn, callback) {
+//     console.log(`I am learn: ${learn}`)
+//     callback()
+// }
+// function done() { 
+//     console.log('I am very good')
+// }
+// learnJS('JS', done)
+
+// // ..Objects
+// let obj = {
+//     name: 'NumerOne',
+//     width: '300 px',
+//     height: '300 px',
+//     color: {
+//          border: 'red',
+//          background: 'yellow'
+//     }
+// }
+// console.log(obj.color.background)
+// console.log(Object.keys(obj).length)
+
+// delete obj.name
+// console.log(obj)
+
+// for (let key in obj) {
+//     console.log(`Свойство ${key} имеет значение ${obj.key}`)
+// }
+
+// for (let key in obj) {
+//     if (typeof(obj.key) === 'object') {
+//         for (let i in obj.key) {
+//             console.log(`Свойство ${i} имеет значение ${obj.key.i}`)
+//         }
+//     } else {
+//         console.log(`Свойство ${key} имеет значение ${obj.key}`)
+//     }
+// }
+
+
+// let counter = 0
+
+// for (let key in obj) {
+//     if (typeof(obj[key]) === 'object') {
+//         for (let i in obj[key]) {
+//             console.log(`Свойство ${i} имеет значение ${obj.key.i}`)
+//             counter++
+//         } 
+//     } else {
+//         console.log(`Свойство ${key} имеет значение ${obj.key}`)
+//         counter++
+//     }
+// }
+
+// console.log(counter)
+
+
+// let options = {
+//     name: 'NumerOne',
+//     width: '300 px',
+//     height: '300 px',
+//     color: {
+//          border: 'red',
+//          background: 'yellow'
+//     },
+//     makeTest: function() {
+//         console.log('Test OK')
+//     }
+// }
+
+// console.log(options.makeTest)
+
+
+// // ..Деструктуризация объекта
+
+// let num = {
+//     name: 'NumerOne',
+//     width: '300 px',
+//     height: '300 px',
+//     color: {
+//          border: 'red',
+//          background: 'yellow'
+//     },
+//     makeTest: function() {
+//         console.log('Test OK')
+//     }
+// }
+
+// let {border, background} = num.color
+// console.log(border, background)
+
+// Массивы и псевдомассивы
+
+// let arr = [1, 3, 5, 7]
+
+// arr.pop() // удаляет последний аргумент в массиве
+// console.log(arr)
+
+// arr.push(9) // добавляет указанный в скобках арумент в конец массива
+// console.log(arr)
+
+// for (let i = 0; i <= arr.length; i++) {
+//     console.log(arr[i])
+// }
+
+// for (let value of arr) { 
+//     console.log(value)
+// }
+
+// // forEach
+
+// let arr = [1, 3, 5, 7, 9]
+
+// arr.forEach(function(item, i, arr) {   // ф-ция вклчюает три аргумента, 1-й(любое имя) значение, 2-й номер по порядку, 3-й имя массива
+//     console.log(`${i}: ${item }} внутри массива ${arr}`)
+// })
+
+// // .. split , метод преобразует строку в массив
+
+// let string = prompt('', '')
+// let names = string.split(', ')  // в аргумент указываем разделитель в строке, это важно знать, в нащем случае это запятая в prompt
+// console.log(names)
+
+// //  join , метод делает строку из массива
+
+// let array = [1, 3, 5, 7, 9]
+// let str = array.join(', ') // в скобках указываем разделитель
+// console.log(str)
+
+// // sort , сортирует массив по алфавиту
+//  let Arr = ['Dima', 'Tonya', 'Stepan', 'Alexey']
+//  Arr.sort()
+//  console.log(Arr)
+
+
+//  let massiv = [22, 44, 23, 77, 1]
+//  massiv.sort(compareNum)
+//  console.log(massiv)
+
+//  function compareNum(a, b) {
+//     return a - b
+//  }
+
+// // .. Передача по ссылке и по значению, Spread оператор
+
+//  let obj = {
+//      a: 1,
+//      b: 2,
+//      c: 3
+//  }
+
+//  let newObj = obj
+//  newObj.a = 20
+//  console.log(obj)
+//  console.log(newObj)
+
+ 
+//  function copy(mainObj) {
+//      let objCopy = {}
+//      let key
+//      for(key in mainObj) {
+//          objCopy[key] = mainObj[key]
+//      }
+//      return objCopy
+//  }
+
+//  let numbers = {
+//      a: 20,
+//      b: 40,
+//      c: {
+//          x: 7,
+//          y: 14
+//      }
+//  }
+
+//  let newNumber = copy(numbers)
+
+//  newNumber.a = 44
+//  numbers.a = 10
+
+//  console.log(numbers)
+//  console.log(newNumber)
+
+//  // Объединение объектов
+
+//  let add = {
+//      d: 20,
+//      e: 30
+//  }
+
+//  console.log(Object.assign(numbers, add)) // 1-й аргумент в какой объект, 2-й из какого объекта
+
+ // массивы
+
+ let oldArray = [1, 3, 5, 7, 9]
+ let newArray = oldArray
+
+ console.log(newArray)
