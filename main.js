@@ -194,15 +194,15 @@
 // alert(multi(sum))
 
 function sum() {
-  let a = +prompt('Input number 1', '')
-  let b = +prompt('Input number 2', '')
+  let a = +prompt('Input number 1 ((Number 1 + Number 2) * Number 3)', '')
+  let b = +prompt('Input number 2 ((Number 1 + Number 2) * Number 3)', '')
   let sum = a + b
   return sum
 }
 
 function multi(callback) {
   let a = callback()
-  let b = +prompt('Input multi', '')
+  let b = +prompt('Input multi ((Number 1 + Number 2) * Number 3)', '')
   let c = a * b
   return c
 }
