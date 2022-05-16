@@ -193,26 +193,53 @@
 //
 // alert(multi(sum))
 
-function sum() {
-  let a = +prompt('Input number 1 ((Number 1 + Number 2) * Number 3)', '')
-  let b = +prompt('Input number 2 ((Number 1 + Number 2) * Number 3)', '')
-  let sum = a + b
-  return sum
-}
-
-function multi(callback) {
-  let a = callback()
-  let b = +prompt('Input multi ((Number 1 + Number 2) * Number 3)', '')
-  let c = a * b
-  return c
-}
-
-alert(multi(sum))
-
-// function getSum(a, b) {
-//   a = 5
-//   b = 5
-//   let c = a + b
+// function sum() {
+//   let a = +prompt('Input number 1 ((Number 1 + Number 2) * Number 3)', '')
+//   let b = +prompt('Input number 2 ((Number 1 + Number 2) * Number 3)', '')
+//   let sum = a + b
+//   return sum
+// }
+//
+// function multi(callback) {
+//   let a = callback()
+//   let b = +prompt('Input multi ((Number 1 + Number 2) * Number 3)', '')
+//   let c = a * b
 //   return c
 // }
-// console.log(getSum())
+//
+// alert(multi(sum))
+
+// function numberOne(value = 24, multi) {
+//   return value + multi
+// }
+//
+// console.log(numberOne(undefined, 2))
+
+
+// Объявленная функция
+
+// function numberTwo(a, b) {
+//   if(b === undefined) {
+//     return a
+//   } else {
+//     return a + b
+//   }
+// }
+//
+// console.log(numberTwo(2))
+
+
+// Функциональное выражение и присвоение переменной
+
+// const numberThree = function(a, b = 1) {
+//   return a + b
+// }
+//
+// console.log(numberThree(2))
+
+
+// Стрелочная функция и присвоение переменной
+
+// const numberFour = (a, b = 2) => a + b
+//
+// console.log(numberFour(2, 44))
