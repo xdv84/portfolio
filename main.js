@@ -240,6 +240,86 @@
 
 // Стрелочная функция и присвоение переменной
 
-// const numberFour = (a, b = 2) => a + b
+// const numberFour = (a, b = 2) => (a + b)
 //
 // console.log(numberFour(2, 44))
+
+
+// Пример, в стрелочной функции используеются скобки, чтобы неявно вренуть объект
+
+// const newPost = (post, addedAt = Date()) => ({
+//   ...post,
+//   addedAt
+// })
+//
+// const firstPost = {
+//   name: 'Dima',
+//   id: 1
+// }
+//
+// console.log(newPost(firstPost))
+
+
+// Пример стрелочной функции с явным возвратом
+
+// const newPost = (post, addedAt = Date()) => {
+//   return ({
+//     ...post,
+//     addedAt,
+//   });
+// }
+//
+// const firstPost = {
+//   name: 'Dima',
+//   id: 1
+// }
+//
+// console.log(newPost(firstPost))
+
+
+// ******************************************___TRY/CATCH___ПОИСК ОШИБОК******************************************
+
+
+// const func = () => {
+//   throw new Error('Some error')
+// }
+//
+// try{
+//   func()
+// } catch(error) {
+//   console.log(error.message)
+//   // или
+//   console.error(error)
+// }
+//
+// console.log('Continue...')
+
+
+// ******************************************___МАССИВЫ___******************************************
+
+
+// Метод forEach перебирает все элементы массива и не меняет оригинальный массив и ничего не возвращает(undefined), только перебирает массив
+// тут мы используем стрелочную функцию, в параметр elem мы передаем элемент массива на каждом вызове метода forEach
+
+// const arr = [1, 2, 3]
+//
+// console.log(arr)
+//
+// const newArr = arr.forEach((elem) => console.log(elem * 2))  // newArr будет undefined, т.к. forEach не возвращает, только перебирает массив
+//
+// console.log(newArr) // undefined
+
+
+// метод MAP перебирает массив и возвращает новый, не изменяя старый
+
+// const myArr = [1, 2, 3, 4]
+//
+// const newArr = myArr.map(el => el * 3)  // в скобках callback функция
+//
+// console.log(myArr)
+//
+// console.log(newArr)
+
+
+
+
