@@ -57,6 +57,19 @@
 // const personFour = JSON.parse(JSON.stringify(person)) // сначала конвертив в строку JSON, затем из строки JSON  в JS. Тем самым делаем копию объекта со вложенныеми свойствами объекта.
 
 
+// Деструктуризация объекта
+
+// const user = {
+//   name: 'Dima',
+//   age: 38,
+//   city: 'Moscow'
+// }
+//
+// const {name, age, city} = user //создаются переменный с именами свойств объекта user и со значениями свойств
+//
+// console.log(name, age, city)
+
+
 // ******************************************___JSON___******************************************
 
 
@@ -96,6 +109,73 @@
 //     break
 //   }
 //   console.log(i)
+// }
+
+
+// Метод forEach для МАССИВОВ, принимает в себя callback
+
+// const myArr = ['one', 'two', 'three', 'four']
+//
+// myArr.forEach((element, index) => {
+//   console.log(element, index)
+// })
+
+
+// Метод for in для ОБЪЕКТОВ
+
+// for (key in Object) {
+//   // Действия с каждым свойством объекта
+//   // Значение свойства - Object[key]
+// }
+
+// const user = {
+//   name: 'Dima',
+//   age: 38,
+//   city: 'Bansko'
+// }
+//
+// for (const key in user) {
+//   console.log(key, user[key])
+// }
+
+
+// Метод for in для МАССИВА
+
+// const myArr = ['one', 'two', 'three']
+//
+// for (const key in myArr) {
+//   console.log(myArr[key])
+// }
+
+
+// Метод forEach для ОБЪЕКТОВ
+
+// const user = {
+//   name: 'Dima',
+//   age: 38,
+//   city: 'Moscow'
+// }
+//
+// console.log(Object.keys(user))  // позволяет получить ключи объекта в виде массива
+//
+// Object.keys(user).forEach(key => {
+//   console.log(key, user[key])
+// })
+
+
+// Метод for of для СТРОК и МАССИВОВ, ДЛЯ ОБЪЕКТОВ НЕ РАБОТАЕТ!!!
+
+// const str = 'My-homework'
+//
+// for (const letter of str) {
+//   console.log(letter)
+// }
+//
+//
+// const myArr = [1, 2, 3, 4, 5]
+//
+// for (const key of myArr) {
+//   console.log(key)
 // }
 
 
@@ -277,6 +357,23 @@
 // console.log(newPost(firstPost))
 
 
+// Деструктуризация в функции
+
+// const user = {
+//   name: 'Dima',
+//   commentQty: 38
+// }
+//
+// const userInfo = ({name, commentQty }) => {
+//   if(!commentQty) {
+//     return (`User ${name} is not comments`)
+//   }
+//     return (`User ${name} has ${commentQty} comments`)
+// }
+//
+// console.log(userInfo(user))
+
+
 // ******************************************___TRY/CATCH___ПОИСК ОШИБОК******************************************
 
 
@@ -321,5 +418,30 @@
 // console.log(newArr)
 
 
+// Деструктуризация массива
 
+// const fruits = ['apple', 'orange', 'rasberry']
+//
+// const [fruitOne, fruitTwo, fruitThree] = fruits  // создается переменная с указанными именем и значением присваивается элемент массива, порядок объявления важен
+//
+// console.log(fruitOne, fruitTwo, fruitThree)
+
+
+// ******************************************___УСЛОВНЫЕ ИНСТРУКЦИИ___******************************************
+
+
+// const user = {
+//   name: 'Dima',
+//   age: 38
+// }
+//
+// const userInfo = () => {
+//   if(user.age > 30) {
+//     console.log('Good')
+//   } else {
+//     console.log('Bad')
+//   }
+// }
+//
+// userInfo(user)
 
