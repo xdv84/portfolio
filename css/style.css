@@ -130,3 +130,7 @@ button:active {
     transform: translateY(4px) translateX(4px);
     box-shadow: #094c66 0px 0px 0px;
 }
+
+div p {
+    color: blue;
+}

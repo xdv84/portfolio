@@ -445,3 +445,25 @@
 //
 // userInfo(user)
 
+
+
+// ******************************************___КОНСТРУКТОР___******************************************
+
+
+class Comment {
+  constructor(text) {
+    this.text = text
+    this.votesQty = 0
+  }
+  upvoite() {
+    this.votesQty += 1
+  }
+}
+
+const firstCommit = new Comment('My first comment')
+
+firstCommit.upvoite()
+
+console.log(firstCommit)
+
+console.log(firstCommit.hasOwnProperty('text'))
