@@ -402,7 +402,7 @@
 //
 // console.log(arr)
 //
-// const newArr = arr.forEach((elem) => console.log(elem * 2))  // newArr будет undefined, т.к. forEach не возвращает, только перебирает массив
+// const newArr = arr.forEach(elem => console.log(elem * 2))  // newArr будет undefined, т.к. forEach не возвращает, только перебирает массив
 //
 // console.log(newArr) // undefined
 
@@ -450,20 +450,21 @@
 // ******************************************___КОНСТРУКТОР___******************************************
 
 
-class Comment {
-  constructor(text) {
-    this.text = text
-    this.votesQty = 0
-  }
-  upvoite() {
-    this.votesQty += 1
-  }
-}
+// class Comment {
+//   constructor(text) {
+//     this.text = text
+//     this.votesQty = 0
+//   }
+//   upvoite() {
+//     this.votesQty += 1
+//   }
+// }
+//
+// const firstCommit = new Comment('My first comment')
+//
+// firstCommit.upvoite()
+//
+// console.log(firstCommit)
+//
+// console.log(firstCommit.hasOwnProperty('text'))
 
-const firstCommit = new Comment('My first comment')
-
-firstCommit.upvoite()
-
-console.log(firstCommit)
-
-console.log(firstCommit.hasOwnProperty('text'))
