@@ -468,3 +468,87 @@
 //
 // console.log(firstCommit.hasOwnProperty('text'))
 
+// function doubleChar(str) {
+//   let newWord = ''
+//   for ( let i = 0; i < str.length; i++) {
+//     newWord += str[i] + str[i]
+//   }
+//   return newWord
+//
+// }
+// console.log(doubleChar('Dima'))
+
+// function doubleChar2(str) {
+//   let newWord = ''
+//   for ( let letter of str) {
+//     newWord += str[letter] + str[letter]
+//   }
+//   return newWord
+// }
+// console.log(doubleChar2('Dima'))
+
+// function doubleChar2(str) {
+//   return str.replace(/(.)/g, "$1$1")
+// }
+// console.log(doubleChar2('Dima'))
+
+// let str = 'Dima'
+// let spl = str.split('')
+// console.log(spl)
+// let maps = spl.map(c => c + c)
+// console.log(maps)
+// let newStr = maps.join('')
+// console.log(newStr)
+
+// function betterThanAverage(classPoints, yourPoints) {
+//   let sum = null
+//   for ( let i = 0; i < classPoints.length; i++) {
+//     sum += classPoints[i]
+//   }
+//   console.log(sum)
+//   return ( yourPoints > sum ) ? 'True' : 'False';
+// }
+// console.log(betterThanAverage([11, 20, 30, 40], 101))
+
+// function betterThanAverage(classPoints, yourPoints) {
+//   const newMyArr = classPoints.map(elem => (elem + elem) / elem.length )
+//   console.log(newMyArr)
+//   return ( yourPoints > newMyArr ) ? 'True' : 'False';
+// }
+// console.log(betterThanAverage([11, 20, 30, 40], 119))
+
+// for ( let y = 1; y < 12; y++) {
+//   let row = ''
+//   for ( let x = 1; x < 12; x++) {
+//     row = row + x * y + '\t'
+//   }
+//   console.log(row)
+// }5
+// let counter = 0
+// for ( let i = 0; i < 5; i++) {
+//   for ( let j = 0; j < 5; j++) {
+//     for ( let k = 0; k < 5; k++) {
+//       counter++
+//       console.log({i, j ,k, counter})
+//     }
+//   }
+// }
+// console.log(counter)
+
+// let number = parseInt(prompt('Input your number'))
+//
+// while (number > 0) {
+//   let d = number % 10
+//   console.log(d)
+//   number = parseInt(number / 10)
+//   console.log(number)
+// }
+
+let x = 100
+let y = 0
+
+while ( x > y ) {
+  console.log( { x , y })
+  x--
+  y++
+}
