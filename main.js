@@ -544,12 +544,12 @@
 //   console.log(number)
 // }
 
-let x = 100
-let y = 0
 
-while ( x > y ) {
-  console.log( { x , y })
-  x--
-  y++
+function isSimple(...args) {
+  console.log(args)
+  let sum = 0
+  for (let i = 0; i < args.length; i++) {
+    sum += args[i]
+  } return sum
 }
-
+console.log(isSimple(2, 10, 4, 5))
